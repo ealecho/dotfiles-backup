@@ -5,13 +5,15 @@ This repository contains my configuration files for:
 - **Helix**: Text editor configuration
 - **Ghostty**: Terminal emulator configuration  
 - **tmux**: Terminal multiplexer configuration
+- **zsh**: Shell configuration
 
 ## Structure
 
 ```
 ├── helix/          # Helix editor config files
 ├── ghostty/        # Ghostty terminal config
-└── tmux/           # tmux configuration
+├── tmux/           # tmux configuration
+└── zsh/            # zsh shell configuration
 ```
 
 ## Installation
@@ -27,4 +29,9 @@ cp ghostty/config ~/.config/ghostty/
 
 # tmux
 cp tmux/tmux.conf ~/.config/tmux/
+
+# zsh
+cp zsh/.zshrc ~/
+cp zsh/.zshenv ~/
+cp zsh/.zprofile ~/
 ```

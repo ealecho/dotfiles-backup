@@ -11,7 +11,9 @@ This repository contains my configuration files for:
 
 ```
 ├── helix/          # Helix editor config files
-├── ghostty/        # Ghostty terminal config
+├── ghostty/        # Ghostty terminal config and themes
+│   ├── config
+│   └── onedarkpro_vaporwave.theme
 ├── tmux/           # tmux configuration
 └── zsh/            # zsh shell configuration
 ```
@@ -26,6 +28,7 @@ cp -r helix/* ~/.config/helix/
 
 # Ghostty
 cp ghostty/config ~/.config/ghostty/
+cp ghostty/onedarkpro_vaporwave.theme ~/.config/ghostty/
 
 # tmux
 cp tmux/tmux.conf ~/.config/tmux/

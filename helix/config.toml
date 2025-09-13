@@ -1,0 +1,83 @@
+theme = "base16_transparent_custom"
+
+[editor]
+cursorline = false
+color-modes = true
+auto-pairs = true 
+# auto-completion = true
+line-number = "relative"
+popup-border = "all"
+# completion-timeout = 850
+preview-completion-insert = true
+# auto-info = true
+undercurl = true
+true-color = true
+mouse = false
+scrolloff = 10
+bufferline = "multiple"
+end-of-line-diagnostics = "error"
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+[editor.auto-save]
+focus-lost = false
+after-delay.enable = true
+after-delay.timeout = 500
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+other-lines = "disable"
+
+[editor.lsp]
+enable = true
+snippets = true
+display-messages = true
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 30
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
+character =  "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
+
+[keys.normal]
+# "%" = "match_brackets"
+"*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+"#" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
+"$" = "goto_line_end"
+0 = "goto_line_start"
+G = "goto_file_end"
+C-s = ":write"
+C-e = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
+
+[keys.select]
+i = "select_textobject_inner"
+a = "select_textobject_around"
+
+
+[keys.normal.space]
+l = ":toggle lsp.display-inlay-hints"
+# Print the current line's git blame information to the statusline.
+B = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
+t = "@|hx-tags<ret>sxxx<ret>c"

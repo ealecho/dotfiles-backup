@@ -1,0 +1,3 @@
+["surround-tag"]
+desc = "Surround with tag"
+exec = "@|hx-tags<ret>sxxx<ret>c"

@@ -1,0 +1,16 @@
+# Ghostty Configuration
+# Current theme
+theme = dark:onedarkpro_vaporwave,light:xcodelight
+
+# Basic terminal settings
+window-title-font-family="MonoLisa"
+window-colorspace = display-p3
+font-family="MonoLisa Medium"
+font-size=14
+font-thicken=true
+#macos-titlebar-style = transparent
+font-feature = +ss01,+ss02,+ss07,+ss03,+zero,+ss18,+ss16,+ss12
+macos-option-as-alt = true
+background-opacity = 0.92
+background-blur-radius = 20
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
